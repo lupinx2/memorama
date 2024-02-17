@@ -22,9 +22,18 @@
             /*img.src = images[posicion];  for browser without srcset support*/
             img.srcset = images[posicion] + " 100w";
         }
+
+        function shuffle() {
+            for (var i = images.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                [images[i], images[j]] = [images[j], images[i]];
+            }
+            /*console.log(images);*/
+        }
+
     </script>
 </head>
-<body>
+<body onload="shuffle();">
     <div style="display: flex; justify-content: center;">
         <table>
             <tr>
