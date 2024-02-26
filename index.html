@@ -17,11 +17,31 @@
             "/img/8.jpg", "/img/8.jpg",
         ];
 
+        const score_cache = 0;
+
+        var lastimg;
+
         function flip(posicion) {
             var img = document.getElementById('img' + posicion);
             /*img.src = images[posicion];  for browser without srcset support*/
             /*En caso de no estar hosteando en github pages, quitar el string "."*/
             img.srcset = "." + images[posicion] + " 100w";
+            if (score_cache == 0){
+                score_cache = images[posicion];
+                lastimg = img;
+            }
+            else{
+                if (score_cache == images[posicion]){
+                    score_cache = 0;
+                }
+                else{
+                    setTimeout(function(){
+                        img.srcset = "./img/anverso.jpg 100w";
+                        lastimg.srcset = "./img/anverso.jpg 100w";
+                    }, 1000);
+                    score_cache = 0;
+                }
+            }
         }
 
         function shuffle() {
