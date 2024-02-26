@@ -20,7 +20,8 @@
         function flip(posicion) {
             var img = document.getElementById('img' + posicion);
             /*img.src = images[posicion];  for browser without srcset support*/
-            img.srcset = images[posicion] + " 100w";
+            /*En caso de no estar hosteando en github pages, quitar el string "memorama"*/
+            img.srcset = "memorama" + images[posicion] + " 100w";
         }
 
         function shuffle() {
@@ -37,28 +38,29 @@
     <div style="display: flex; justify-content: center;">
         <table>
             <tr>
-                <td><img id="img0" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(0);"></td>
-                <td><img id="img1" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(1);"></td>
-                <td><img id="img2" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(2);"></td>
-                <td><img id="img3" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(3);"></td>
+                <!----En caso de no estar hosteando en github pages, quitar el string "memorama"-->
+                <td><img id="img0" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(0);"></td>
+                <td><img id="img1" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(1);"></td>
+                <td><img id="img2" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(2);"></td>
+                <td><img id="img3" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(3);"></td>
             </tr>
             <tr>
-                <td><img id="img4" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(4);"></td>
-                <td><img id="img5" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(5);"></td>
-                <td><img id="img6" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(6);"></td>
-                <td><img id="img7" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(7);"></td>
+                <td><img id="img4" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(4);"></td>
+                <td><img id="img5" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(5);"></td>
+                <td><img id="img6" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(6);"></td>
+                <td><img id="img7" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(7);"></td>
             </tr>
             <tr>
-                <td><img id="img8" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(8);"></td>
-                <td><img id="img9" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(9);"></td>
-                <td><img id="img10" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(10);"></td>
-                <td><img id="img11" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(11);"></td>
+                <td><img id="img8" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(8);"></td>
+                <td><img id="img9" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(9);"></td>
+                <td><img id="img10" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(10);"></td>
+                <td><img id="img11" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(11);"></td>
             </tr>
             <tr>
-                <td><img id="img12" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(12);"></td>
-                <td><img id="img13" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(13);"></td>
-                <td><img id="img14" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(14);"></td>
-                <td><img id="img15" srcset="/img/anverso.jpg 100w" sizes="24px" onclick="flip(15);"></td>
+                <td><img id="img12" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(12);"></td>
+                <td><img id="img13" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(13);"></td>
+                <td><img id="img14" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(14);"></td>
+                <td><img id="img15" srcset="memorama/img/anverso.jpg 100w" sizes="24px" onclick="flip(15);"></td>
             </tr>
         </table>
     </div>
