@@ -19,6 +19,8 @@
 
         var score_cache = 0;
 
+        var final_score = 0;
+
         var lastimg;
 
         function flip(posicion) {
@@ -33,6 +35,10 @@
             else{
                 if (score_cache == images[posicion]){
                     score_cache = 0;
+                    final_score++;
+                    if (final_score == 8){
+                        alert("¡Felicidades, has ganado!");
+                    }
                 }
                 else{
                     var unflip = [lastimg, img]; 
