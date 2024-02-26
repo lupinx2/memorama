@@ -35,9 +35,10 @@
                     score_cache = 0;
                 }
                 else{
+                    var unflip = [lastimg, img]; 
                     setTimeout(function(){
-                        img.srcset = "./img/anverso.jpg 100w";
-                        lastimg.srcset = "./img/anverso.jpg 100w";
+                        unflip[0].srcset = "./img/anverso.jpg 100w";
+                        unflip[1].srcset = "./img/anverso.jpg 100w";
                     }, 1000);
                     score_cache = 0;
                 }
